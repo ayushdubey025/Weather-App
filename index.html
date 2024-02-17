@@ -20,6 +20,7 @@
       <!-- Weather -->
       <div class="weather">
         <img src="images/rain.png" class="weather-icon" />
+        <h3 class="weather-condition">Clear</h3>
         <h1 class="temp">22°c</h1>
         <h2 class="city">New York</h2>
         <div class="details">
@@ -49,6 +50,7 @@
       const searchBox = document.querySelector(".search input");
       const searchBtn = document.querySelector(".search button");
       const weatherIcon = document.querySelector(".weather-icon");
+      const weatherCondition = document.querySelector(".weather-condition");
 
       async function checkWeather(city) {
         const response = await fetch(apiUrl + city + `&appid=${apiKey}`);
@@ -70,16 +72,27 @@
 
           if (data.weather[0].main == "Clouds") {
             weatherIcon.src = "images/clouds.png";
-          } else if (data.weather[0].main == "Clear") {
+            weatherCondition.innerHTML = data.weather[0].main;
+          } 
+          else if (data.weather[0].main == "Clear") {
             weatherIcon.src = "images/clear.png";
-          } else if (data.weather[0].main == "Rain") {
+             weatherCondition.innerHTML = data.weather[0].main;
+          } 
+          else if (data.weather[0].main == "Rain") {
             weatherIcon.src = "images/rain.png";
-          } else if (data.weather[0].main == "Drizzle") {
+             weatherCondition.innerHTML = data.weather[0].main;
+          } 
+          else if (data.weather[0].main == "Drizzle") {
             weatherIcon.src = "images/drizzle.png";
-          } else if (data.weather[0].main == "Mist") {
+             weatherCondition.innerHTML = data.weather[0].main;
+          } 
+          else if (data.weather[0].main == "Mist") {
             weatherIcon.src = "images/mist.png";
-          } else if (data.weather[0].main == "Haze") {
+             weatherCondition.innerHTML = data.weather[0].main;
+          } 
+          else if (data.weather[0].main == "Haze") {
             weatherIcon.src = "images/haze.png";
+             weatherCondition.innerHTML = data.weather[0].main;
           }
 
           document.querySelector(".weather").style.display = "block";

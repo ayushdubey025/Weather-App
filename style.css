@@ -93,18 +93,25 @@ body {
 .wind {
   font-size: 28px;
   margin-top: -6px;
-
 }
-  /* fort default weather display */
+/* fort default weather display */
 
-  .weather {
-    display: none;
-  }
+.weather {
+  display: none;
+}
 
-  .error {
-    text-align: left;
-    margin-left: 10px 0 0 10px;
-    font-size: 14px;
-    /* for hidden purpuse, we use display: none; */
-    display: none;  
-  }
+.error {
+  text-align: left;
+  margin-left: 10px 0 0 10px;
+  font-size: 14px;
+  /* for hidden purpuse, we use display: none; */
+  display: none;
+}
+
+/* for Weather condition, I made some improvements*/
+.weather h3 {
+  margin: 10px;
+  font-size: 24px;
+  text-align: center;
+  color: #2435b8cc;
+}
